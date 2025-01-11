@@ -1,0 +1,216 @@
+GET http://localhost:8000/reservations/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-01T154349.200.json
+
+###
+
+GET http://localhost:8000/reservations/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-01T151049.200.json
+
+###
+
+GET http://localhost:8000/reservations/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-01T150959.500.html
+
+###
+
+GET http://localhost:8000/reservations/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-01T150931.500.html
+
+###
+
+GET http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T150923.500.html
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T150915.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T134628.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T134607.500.html
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T134538.500.html
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T134423.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T134359.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T133737.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T133229.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T132913.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": "2025-1-2"
+}
+
+<> 2025-01-01T132833.200.json
+
+###
+
+POST http://localhost:8000/reservations/
+Content-Type: application/json
+Content-Length: 17
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "date": 999
+}
+
+<> 2025-01-01T132530.200.json
+
+###
+
