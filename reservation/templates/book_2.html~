@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <!-- Add your code in the line below  -->
+    <h1> <!--Add title here --> </h1>
+
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <form action="" method="post" id="booking-form">
+          {% csrf_token %}
+          {{form.as_p}}
+            <input type="submit" id="button">
+        </form>
+      </div>
+      <!--End col-->
+
+      <!--Begin col-->
+        
+<div class="column">
+    <div class="videowrap">
+        <table id="guest-table" width="100%" style="border-collapse: collapse; text-align: center;">
+            <thead>
+                <tr>
+                    <th colspan="2" style="border-bottom: 1px solid #ddd;">Bookings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="padding: 20px;">No Bookings to show</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!--End row-->
+
+    <script>
+        // Variables declaration
+        let endpoint = '/book/';
+        let rawData;
+        
+        const payload = JSON.stringify({
+            "first_name": "Das",
+            "reservation_date": "2025-01-09",
+            "reservation_slot": 10,
+        });
+        
+        const headers = {
+            'Accept': 'application/json', 
+            'Content-Type': 'application/json'
+        };
+        
+        // Function definitions
+        function myalert(message) {
+            alert(message)
+        }
+        
+        async function callBookingAPI() {
+            try {
+                let response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: headers,
+                    body: payload
+                });
+                rawData = await response.text();
+                return rawData;
+            } catch (error) {
+                rawData = error.message;
+                console.log('Network error:', error.message);
+                return error;
+            }
+        }
+        
+        async function tryBooking() {
+            try {
+                let bookingstatus = await callBookingAPI() 
+                if (JSON.parse(bookingstatus)['success']){
+                    myalert('Booking Successful')
+                } else {
+                    myalert('Sorry, booking failed!')
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+        
+        // Event listener
+        const submitButton = document.getElementById('submit');
+        submitButton.addEventListener('click', async (event) => {
+            event.preventDefault();
+            await tryBooking();
+        });
+    </script>
+  </article>
+</section>
+<!-- Add your code inside the script tags below  -->
+<script src="{% static 'js/myscript.js' %}"></script>
+{% endblock %}
+
