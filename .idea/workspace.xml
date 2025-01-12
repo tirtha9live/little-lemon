@@ -62,7 +62,7 @@
     <configuration name="rest-api_2 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_2.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="common.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/restaurant/static/js/common.js" working-dir="$PROJECT_DIR$/resturant/static/js">
+    <configuration name="common.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/restaurant/static/js/common.js" working-dir="$PROJECT_DIR$/restaurant/static/js">
       <method v="2" />
     </configuration>
     <configuration name="little-lemon-capstone" type="Python.DjangoServer" factoryName="Django server">
