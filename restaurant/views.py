@@ -27,7 +27,7 @@ class book(APIView):
         if form.is_valid():
             # Create booking object but don't save to database yet
             booking = form.save(commit=False)
-            # Set the username field to the current user
+            # Set the username field to the current user (as we excluded in forms)
             booking.username = request.user
             # Now save to database
             booking.save()

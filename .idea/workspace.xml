@@ -55,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "last_opened_file_path": "D:/CloudNotes/MyCode/little-lemon-capstone/restaurant/templates",
+    "last_opened_file_path": "D:/CloudNotes/MyCode/little-lemon-capstone/restaurant",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +72,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CloudNotes\MyCode\little-lemon-capstone\restaurant" />
       <recent name="D:\CloudNotes\MyCode\little-lemon-capstone\restaurant\templates" />
       <recent name="D:\CloudNotes\MyCode\little-lemon-capstone" />
       <recent name="D:\CloudNotes\MyCode\little-lemon-full-stack\restaurant\templates" />
@@ -147,7 +148,7 @@
       <workItem from="1736440986606" duration="769000" />
       <workItem from="1736600516299" duration="70000" />
       <workItem from="1736603512941" duration="7903000" />
-      <workItem from="1736839141742" duration="71720000" />
+      <workItem from="1736839141742" duration="79740000" />
     </task>
     <servers />
   </component>
