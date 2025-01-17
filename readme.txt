@@ -23,7 +23,7 @@ GRANT ALL ON *.* TO 'fullstackdev'@'localhost';
 exit
 ------------Run Migrations----------------
 #settings.py - updated with above data dont change
-#perform migrations
+#perform migrations (first delete residue restaurant/migrations folder)
 python manage.py makemigrations restaurant
 python manage.py migrate
 python manage.py runserver
@@ -150,10 +150,9 @@ Grading Criteria
     → https://github.com/tirtha9live/little-lemon.git
 
 #3 Does the application connect the backend to a MySQL database?
-    → - Yes, Dont change the settings.py file, refer to the setup instructions above
+    → Yes, Dont change the settings.py file, refer to the setup instructions above
 
 #4 Are the menu and table booking APIs implemented? - Yes
-
     → Booking API
         Navigate to /book/
             Booked slots for the chosen date will be greyed out
@@ -178,7 +177,7 @@ Djoser + DTL
     is_staff/superuser will get access to
         - Menu add/remove
         - Booking Page will show Name of the customer on selecting a date
-        - Reservation Page will all Bookings Json dump
+        - Reservation Page will show all Bookings Json dump
 
 #6 Does the application contain unit tests?
     → python manage.py test restaurant
