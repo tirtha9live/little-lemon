@@ -5,7 +5,7 @@
 <section>
   <article>
     <!-- Add your code in the line below  -->
-    <h1> <!--Add title here --> </h1>
+    <h1>Welcome <span id="username" style="text-decoration: none"></span>!</h1>
 
     <!--Begin row-->
     <div class="row">
@@ -20,7 +20,6 @@
       <!--End col-->
 
       <!--Begin col-->
-        
 <div class="column">
     <div class="videowrap">
         <table id="guest-table" width="100%" style="border-collapse: collapse; text-align: center;">
@@ -39,76 +38,11 @@
 </div>
     <!--End row-->
 
-    <script>
-        // Variables declaration
-        let endpoint = '/book/';
-        let rawData;
-        
-        
-        const headers = {
-            'Accept': 'application/json', 
-            'Content-Type': 'application/json'
-        };
-        
-        // Function definitions
-        function myalert(message) {
-            alert(message)
-        }
-        
-        async function callBookingAPI(payload) {
-            try {
-                let response = await fetch(endpoint, {
-                    method: 'POST',
-                    headers: headers,
-                    body: payload
-                });
-                rawData = await response.text();
-                return rawData;
-            } catch (error) {
-                rawData = error.message;
-                console.log('Network error:', error.message);
-                return error;
-            }
-        }
-        
-        async function tryBooking() {
-            try {
-                first_name = document.getElementById('id_first_name').value
-                reservation_date = document.getElementById('id_reservation_date').value
-                reservation_slot = document.getElementById('id_reservation_slot').value
-                
-                const payload = JSON.stringify({
-                    "first_name": first_name,
-                    "reservation_date": reservation_date,
-                    "reservation_slot": reservation_slot,
-                });
-                
-                let bookingstatus = await callBookingAPI(payload) 
-                if (JSON.parse(bookingstatus)['success']){
-                    myalert('Booking Successful')
-                } else {
-                    myalert('Sorry, booking failed!')
-                }
-            } catch (error) {
-                console.error(error)
-            }
-        }
-        
-        // Event listener
-        const submitButton = document.getElementById('button');
-        submitButton.addEventListener('click', async (event) => {
-            event.preventDefault();
-            await tryBooking();
-            form = document.getElementById('booking-form')
-            form.reset()
-            
-            
-        });
-    </script>
         
  </article>
 </section>
 <!-- Add your code inside the script tags below  -->
-<script src="{% static 'js/myscript.js' %}"></script>
+<script src="{% static 'js/book.js' %}" defer></script>
+    <script src="{% static 'js/myscript.js' %}"></script>
 {% endblock %}
 

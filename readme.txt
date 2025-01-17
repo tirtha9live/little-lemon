@@ -2,14 +2,14 @@
 Setup Instructions
 ───────────────────
 
-#Change to
-cd little-lemon-full-stack
+#use admin terminal and Change to
+cd little-lemon-capstone
 #install all dependecies
 pipenv --python=3.12 install
 pipenv shell
 #launch vscode
 code .
-
+------------My SQL----------------
 #setup mysql and from
 mysql -u root -p
 ==>give root password set during installation
@@ -21,17 +21,20 @@ create database reservations;
 create user 'fullstackdev'@'localhost' identified by 'fullstack321';
 GRANT ALL ON *.* TO 'fullstackdev'@'localhost';
 exit
-
+------------Run Migrations----------------
 #settings.py - updated with above data dont change
 #perform migrations
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 
+------------Populate Database for Testing----------------
 # lets create some turkish menu
+# just paste the below in terminal to create some entries
 python manage.py shell
 from restaurant.models import Menu
-Menu.objects.bulk_create([
+
+menu_items = [
     Menu(
         name="Kebap",
         price=15,
@@ -57,46 +60,106 @@ Menu.objects.bulk_create([
         price=7,
         menu_item_description="Sweet pastry made of layers of filo dough, filled with nuts and soaked in syrup."
     ),
-])
+]
+
+Menu.objects.bulk_create(menu_items)
+
+-------create some users (no pass)-------
+from django.contrib.auth.models import User  # Ensure you import the User model (adapt if you're using a custom user model)
+from restaurant.models import Booking  # Import your Booking model
+from datetime import date
+
+# Step 3: Create a list of user instances
+users = [
+    User(username='alice', first_name='Alice', last_name='Smith', email='alice@example.com'),
+    User(username='bob', first_name='Bob', last_name='Johnson', email='bob@example.com'),
+    User(username='charlie', first_name='Charlie', last_name='Brown', email='charlie@example.com'),
+    User(username='david', first_name='David', last_name='Williams', email='david@example.com'),
+    User(username='eve', first_name='Eve', last_name='Davis', email='eve@example.com')
+]
+
+# Save all users at once
+User.objects.bulk_create(users)
+-------
 
 
+#lets create some initial bookings (you can add more from the frontend - which requires authentication)
+
+from your_app.models import Booking
+from datetime import date
+from django.contrib.auth.models import User
+
+user = User.objects.get(pk=1) #lets assume this user is creating the bookings
+#adjust the dates if needed in frontend I am allowing only 14 days advance booking
+reservations = [
+    Booking(username=user, first_name='Alice', reservation_date=date(2025, 1, 15), reservation_slot=14),  # Mon
+    Booking(username=user, first_name='Bob', reservation_date=date(2025, 1, 16), reservation_slot=15),    # Tue
+    Booking(username=user, first_name='Charlie', reservation_date=date(2025, 1, 17), reservation_slot=16), # Wed
+    Booking(username=user, first_name='David', reservation_date=date(2025, 1, 18), reservation_slot=17),   # Thu
+    Booking(username=user, first_name='Eve', reservation_date=date(2025, 1, 19), reservation_slot=18)      # Fri
+]
+
+Booking.objects.bulk_create(reservations)
+
+-------create super user and generate token-----------
+#create superuser with below password and generate token using djoser api
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+#response like below means djoser working correctly:
+{
+  "auth_token": "68ee0fb825b4cb07476dfea07d98ea378be6cf63"
+}
+
+#this means djoser is working fine!
+
+#created from frontend
+{
+    "username": "swati20",
+    "email": "swati20@gmail.com",
+    "password": "tirthankardas"
+}
 
 ─────────────────
 Grading Criteria
 ─────────────────
 
-#1 Is the app added to the installed apps list in the settings file? - Yes
-#2 Is the database configuration updated inside the settings file? - Yes
-#3 Were migrations performed? - Yes
-#4 Are there three fields in the booking form: First name, Reservation date and Reservation slot? - Yes
-#5 Does a date selector open up when you click on the reservation date field on the booking form? - Yes
-    #create 3+ bookings we need in next steps
 
-#6 Are all the bookings available as JSON data on the reservations page?
-    #once the bookings are done - it should show up here
+#1 Does the web application use Django to serve static HTML content?
+    → Static Dynamic both are served, have used DTL and Javascript
+    → 'static' folder is also used for JS/CSS
 
-#7 Is duplicate booking prohibited on a specific date if the time is already booked? - Yes
-    #backend - using model constrains 'unique_together' fields
-    #frontend - Javascript will Grey out and disable the Booked Hours, Hover on Grey Slots would say 'BOOKED'
-
-#8 Does changing the date refresh the booking data?
-    #Yes the Booked slots will show in the right table, just toggle differt date to refresh
-    #also for that day will booked slots be disabled and Greyout
-
-#9 Is a duplicate booking on a specific date and time unavailable if the slot is already booked?
-    #yes - not possible duplicate booking from both frontend and backend
-
-#10 Can you display bookings for a specific date using the API?
-    #first create some bookings in the 'Book' Page
-    #then select any your your reservation date - if any booking will show in right table
-
-#11 If there is no booking, does a No Booking message show for that date?
-    #yes - use date picker in the book page
-
-#12 Was fetch API used to retrieve data from the API? - Yes
-
-#13 Is the current date automatically selected when you open the booking form?
-    #yes - also will show if any bookings today
+#2 Has the learner committed the project to a Git repository?
 
 
----------------Thank you----------------------
+#3 Does the application connect the backend to a MySQL database? - Yes
+    → Dont change the settings.py file, refer to the setup instructions above
+
+#4 Are the menu and table booking APIs implemented? - Yes
+
+Booking API
+Navigate to /book/
+    Booked slots for the chosen date will be greyed out
+        Non Staff Login:
+            It will just say 'BOOKED' <slot HRs>
+        Staff Login (eg Superuser)
+            It will Show <Customer Name> <slot HRs>
+            They will also see an extra navigation 'Reservations' which shows a Json dump of all reservations
+
+
+#5 Is the application set up with user registration and authentication?
+Djoser + DTL
+    New users can Register
+    Use Login Button on top right corner
+
+#6 Does the application contain unit tests?
+
+
+#7 Can the API be tested with the Insomnia REST client?
+Yes - refer to the 'rest-api_tests.http' file for REST testing

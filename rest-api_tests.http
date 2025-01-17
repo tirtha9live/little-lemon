@@ -1,0 +1,98 @@
+#Menuitems view
+GET http://localhost:8000/api/menu-items
+Accept: application/json
+
+
+###
+#single Menuitem View
+GET http://localhost:8000/api/menu-items/2
+Accept: application/json
+
+
+#add menuitem
+###
+POST http://localhost:8000/api/menu-items
+Accept: application/json
+
+{
+"name": "Lahmacun",
+  "price": 8,
+  "menu_item_description": "Thin and crispy flatbread topped with minced meat, vegetables, and spices."
+}
+
+###
+#Delete menuitem
+###
+DELETE http://localhost:8000/api/menu-items/7
+Accept: application/json
+
+
+###
+#login/token generation
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+###
+#logged in?
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token 4029013d36497b2939bbcea5fb08233376b245a4
+
+###
+#logout
+POST http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 4029013d36497b2939bbcea5fb08233376b245a4
+
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+###
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+
+###
+#testing booking api
+POST http://localhost:8000/book/
+Content-Type: application/json
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+
+
+{
+    "first_name": "Swati",
+    "guestCount": 2,
+    "reservation_date": "2024-01-27",
+    "reservation_slot": 15
+}
+
+###
+#delete menu
+
+DELETE http://localhost:8000/api/menu-items/15
+Content-Type: application/json
+
+
+###
+#add menu item
+POST http://localhost:8000/api/menu-items
+Content-Type: application/json
+
+{
+        "name" : "Kebap",
+        "price" : 15,
+        "menu_item_description" : "Grilled and spiced meat served with rice or bulgur."
+}

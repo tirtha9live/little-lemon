@@ -118,11 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         // You can also perform other actions here as needed
                         if (bookingData.length > 0) {
                             guestTableBody.innerHTML = '';
-
+                            const is_staff = localStorage.is_staff
                             for (let i = 0; i < bookingData.length; i++) {
                                 let booked_slot = bookingData[i]?.reservation_slot;
                                 let booking_name = bookingData[i]?.first_name;
-
                                 //console.log(booked_slot)
                                 // Get the select element
                                 let selectElement = document.getElementById('id_reservation_slot');
@@ -131,8 +130,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                 // Add a tooltip to the disabled option
                                 selectElement.querySelector(`option[value="${booked_slot}"]`).title = 'BOOKED';
 
-                                //also show the bookings info
+                                if(is_staff_status()){
+                                // show the bookings info with Name
                                 guestTableBody.innerHTML += `<tr><td>${booking_name}</td><td>${booked_slot} Hrs</td></tr>`;
+
+                                }else{
+                                    guestTableBody.innerHTML += `<tr><td>BOOKED</td><td>${booked_slot} Hrs</td></tr>`;
+                                }
+
 
                                 // console.log(`Reservation Slot: ${bookingData[i].reservation_slot}`);
                                 //console.log("------------------------");

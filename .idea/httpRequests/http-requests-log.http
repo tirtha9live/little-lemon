@@ -1,216 +1,716 @@
-GET http://localhost:8000/reservations/
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2025-01-01T154349.200.json
-
-###
-
-GET http://localhost:8000/reservations/
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2025-01-01T151049.200.json
-
-###
-
-GET http://localhost:8000/reservations/
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2025-01-01T150959.500.html
-
-###
-
-GET http://localhost:8000/reservations/
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2025-01-01T150931.500.html
-
-###
-
-GET http://localhost:8000/reservations/
+POST http://localhost:8000/api/menu-items
 Content-Type: application/json
-Content-Length: 24
+Content-Length: 139
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+        "name" : "Kebap",
+        "price" : 15,
+        "menu_item_description" : "Grilled and spiced meat served with rice or bulgur."
 }
 
-<> 2025-01-01T150923.500.html
+<> 2025-01-17T120334.201.json
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/api/menu-items/
 Content-Type: application/json
-Content-Length: 24
+Content-Length: 139
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+        "name" : "Kebap",
+        "price" : 15,
+        "menu_item_description" : "Grilled and spiced meat served with rice or bulgur."
 }
 
-<> 2025-01-01T150915.200.json
+<> 2025-01-17T120323.404.html
 
 ###
 
-POST http://localhost:8000/reservations/
+DELETE http://localhost:8000/api/menu-items/15
 Content-Type: application/json
-Content-Length: 24
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T223006.401.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T222957.401.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T222946.401.json
+
+###
+
+GET http://localhost:8000/api/menu-items/15
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T222933.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T185718.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T185629.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T185616.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T185533.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T183248.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T183200.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token bd8a073330c8fba68431f7d514ebdffd97a2f025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-16T181824.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+	  "username": "tirtha9",
+	  "password": "admin321"
 }
 
-<> 2025-01-01T134628.200.json
+<> 2025-01-16T181759.200.json
 
 ###
 
-POST http://localhost:8000/reservations/
+GET http://localhost:8000/api/auth/users/me/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-15T232053.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token 4029013d36497b2939bbcea5fb08233376b245a4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-15T232009.401.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+	  "username": "tirtha9",
+	  "password": "admin321"
 }
 
-<> 2025-01-01T134607.500.html
+<> 2025-01-15T231945.200.json
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 89
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+    "guestCount": 2,
+    "reservation_date": "2024-01-27",
+    "reservation_slot": 15
 }
 
-<> 2025-01-01T134538.500.html
+<> 2025-01-15T223707.400.json
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 116
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+    "first_name": "Swati",
+    "guestCount": 2,
+    "reservation_date": "2024-01-27",
+    "reservation_slot": 15
 }
 
-<> 2025-01-01T134423.200.json
+<> 2025-01-15T223657.200.json
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 134
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+    "username": 1,
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
 }
 
-<> 2025-01-01T134359.200.json
+<> 2025-01-15T223627.200.json
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 134
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+    "username": 1,
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
 }
 
-<> 2025-01-01T133737.200.json
+<> 2025-01-15T223503.500.html
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/api/auth/token/login/
 Content-Type: application/json
-Content-Length: 24
+Content-Length: 55
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+	  "username": "tirtha9",
+	  "password": "admin321"
 }
 
-<> 2025-01-01T133229.200.json
+<> 2025-01-15T223448.200.json
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 134
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+    "username": 1,
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
 }
 
-<> 2025-01-01T132913.200.json
+<> 2025-01-15T222712.500.html
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 24
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 134
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": "2025-1-2"
+    "username": 1,
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
 }
 
-<> 2025-01-01T132833.200.json
+<> 2025-01-15T222442.500.html
 
 ###
 
-POST http://localhost:8000/reservations/
+POST http://localhost:8000/book/
 Content-Type: application/json
-Content-Length: 17
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 137
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "date": 999
+    "username_id": 1,
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
 }
 
-<> 2025-01-01T132530.200.json
+<> 2025-01-15T222259.500.html
+
+###
+
+POST http://localhost:8000/book/
+Content-Type: application/json
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 134
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "username": 1,
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
+}
+
+<> 2025-01-15T222240.500.html
+
+###
+
+POST http://localhost:8000/book/
+Content-Type: application/json
+Authorization: Token e5bc0079f1178bd175be0e36a8ebbd3d89a3ed3f
+Content-Length: 115
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
+}
+
+<> 2025-01-15T221541.500.html
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-15T221513.200.json
+
+###
+
+POST http://localhost:8000/book/
+Content-Type: application/json
+Content-Length: 115
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "first_name": "John",
+    "guestCount": 2,
+    "reservation_date": "2024-01-25",
+    "reservation_slot": 14
+}
+
+<> 2025-01-15T221451.500.html
+
+###
+
+POST http://localhost:8000/book/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-15T221148.500.html
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-15T220249.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 4029013d36497b2939bbcea5fb08233376b245a4
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token 4029013d36497b2939bbcea5fb08233376b245a4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T201509.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T201455.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T201450.401.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T201446.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T201439.401.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T201430.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T201017.401.json
+
+###
+
+POST http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8000/api/auth/token/logout/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T200956.405.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T200915.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T195852.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Authorization: Token 68ee0fb825b4cb07476dfea07d98ea378be6cf63
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-14T190943.200.json
+
+###
+
+GET http://localhost:8000/api/auth/users/me/
+Content-Type: application/json
+Content-Length: 62
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "auth_token": "68ee0fb825b4cb07476dfea07d98ea378be6cf63"
+}
+
+<> 2025-01-14T190911.401.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T190308.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T183442.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T182212.200.json
+
+###
+
+POST http://localhost:8000/api/auth/token/login/
+Content-Type: application/json
+Content-Length: 55
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+	  "username": "tirtha9",
+	  "password": "admin321"
+}
+
+<> 2025-01-14T164850.200.json
 
 ###
 

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Menu</h1>
+<!--Begin col-->
+<div class="column">
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th style="width: 50%;" colspan="25px">Description</th>
+            <th width="5px">Remove Item</th>
+        </tr>
+    </thead>
+    <tbody id="menulist">
+        <tr>
+            <td>Kebap</td>
+            <td>$15</td>
+            <td style="word-wrap: break-word;">Grilled and spiced meat served with rice or bulgur.</td>
+        </tr>
+    </tbody>
+</table>
+    <p>Add any new items below<br></p>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th style="width: 50%;">Description</th>
+        </tr>
+    </thead>
+    <tbody id="menulist">
+        <tr>
+            <td><input type="text" maxlength="20" default="Enter item name"></td>
+            <td>$<input type="number" maxlength="2" default="Enter Price"></td>
+            <td style="word-wrap: break-word;"><input type="text" maxlength="100" default="Enter Description"></td>
+        </tr>
+    </tbody>
+</table>
+<input type="submit" id="add-item"> 
+
+</div>
+<!--End col-->
+    
+<script src="{% static 'js/menuitems.js' %}">
+    
+</script>
+{% endblock %}

@@ -1,14 +1,22 @@
 {% load static %}
+<div style="text-align: right; padding: 10px;">
+    <label id="loginlogout">
+Dummy text
+           </label>
+</div>
 <header>
-  <img src="{% static 'img/logo.png' %}" />
+    <img src="{% static 'img/logo.png' %}" />
+    <script src="{% static 'js/common.js' %}" defer></script>
 </header>
 <nav>
-  <ul>
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'about' %}">About</a></li>
-    <li><a href="{% url 'menu' %}">Menu</a></li>
-    <li><a href="{% url 'book' %}">Book</a></li>
-  <li><a href="{% url 'bookings' %}">Reservations</a></li>
-      
-  </ul>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'menu' %}">Menu</a></li>
+        <li><a href="{% url 'book' %}">Book</a></li>
+        <li id="reservations-nav"><a href="{% url 'bookings' %}">Reservations</a></li>
+    </ul>
+    <script src="{% static 'js/common.js' %}">
+        
+    </script>
 </nav>

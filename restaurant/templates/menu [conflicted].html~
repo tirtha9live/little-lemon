@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Menu</h1>
+<!--Begin col-->
+<div class="column">
+{#    {% for item in menu.menu %}#}
+{#    <p>#}
+{#        <a href="{% url 'menu_item' pk=item.pk %}">#}
+{#            {{ item.name }}#}
+{#            </a>#}
+{#        <span class="menu-price">#}
+{#            ${{ item.price }}.00#}
+{#        </span>#}
+{#    </p>#}
+{#    {% endfor %}#}
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th style="width: 50%;">Description</th>
+        </tr>
+    </thead>
+    <tbody id="menulist">
+        <tr>
+            <td>Kebap</td>
+            <td>$15</td>
+            <td style="word-wrap: break-word;">Grilled and spiced meat served with rice or bulgur.</td>
+        </tr>
+    </tbody>
+</table>
+    <p>Add any new items below<br></p>
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th style="width: 50%;">Description</th>
+        </tr>
+    </thead>
+    <tbody id="menulist">
+        <tr>
+            <td><label>
+                <input type="text" maxlength="20" default="Enter item name">
+            </label></td>
+            <td>$15</td>
+            <td style="word-wrap: break-word;">Grilled and spiced meat served with rice or bulgur.</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!--End col-->
+    
+<script src="{% static 'js/menuitems.js' %}">
+    
+</script>
+{% endblock %}
